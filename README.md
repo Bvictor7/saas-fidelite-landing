@@ -1,16 +1,54 @@
-# React + Vite
+# Fidelite Pro — Site Vitrine
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Site de presentation du SaaS Fidelite Pro. Site statique construit avec React + Vite + Tailwind CSS.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 18 + Vite
+- Tailwind CSS 3
+- Deploye sur Render (Static Site)
 
-## React Compiler
+## Structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```
+saas-fidelite-landing/
+├── public/
+│   └── _redirects        # Routing SPA pour Render
+├── src/
+│   ├── components/
+│   │   ├── Navbar.jsx    # Navigation fixe avec menu mobile
+│   │   ├── Hero.jsx      # Section principale avec mockup dashboard
+│   │   ├── Features.jsx  # Grille des fonctionnalites
+│   │   ├── Pricing.jsx   # Plans tarifaires (Gratuit / Starter / Pro)
+│   │   ├── FAQ.jsx       # Questions frequentes accordeon
+│   │   └── Footer.jsx    # Pied de page
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+├── tailwind.config.js
+├── vite.config.js
+└── package.json
+```
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+git clone https://github.com/Bvictor7/saas-fidelite-landing.git
+cd saas-fidelite-landing
+npm install
+npm run dev
+```
+
+## Deploiement
+
+Le site se deploie automatiquement sur Render a chaque push sur `main`.
+
+- **Build** : `npm install && npm run build`
+- **Publish** : `dist/`
+- **URL** : https://saas-fidelite-landing.onrender.com
+
+## Liens
+
+- **App** : https://saas-fidelite-client.onrender.com
+- **API** : https://saas-fidelite-api.onrender.com
+- **Code app** : https://github.com/Bvictor7/cartes-fidelite-b2b

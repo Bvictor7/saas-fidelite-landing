@@ -28,7 +28,11 @@ export default function Footer() {
         </div>
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm">© 2026 Fidelite Pro. Tous droits reserves.</p>
-          <p className="text-sm">Fait avec passion pour les commercants</p>
+          <div className="flex items-center gap-6 text-sm">
+            <a href="/privacy" className="hover:text-white transition">Confidentialite</a>
+            <a href="/legal"   className="hover:text-white transition">Mentions legales</a>
+            <a href="/terms"   className="hover:text-white transition">CGU</a>
+          </div>
         </div>
       </div>
     </footer>
